@@ -2,6 +2,7 @@
   "name": "tweets-react",
   "version": "0.1.0",
   "private": true,
+  "main": "src/index.js",
   "homepage": "https://deft-tanuki-da7c61.netlify.app/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
