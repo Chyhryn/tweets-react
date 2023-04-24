@@ -3,18 +3,17 @@ import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import {
   Card,
-  CardImg,
-  CardImgThumb,
+  // CardImg,
+  // CardImgThumb,
   AvatarThumb,
   Avatar,
-  Line,
+  // Line,
   List,
   Item,
 } from "./UserCard.styled";
 import { UserCardBtn } from "./UserCardBtn/UserCardBtn";
 import { updateFollowers } from "../../redux/users/operations";
 import UserDefaultAvatar from "../../images/user-default-avatar.jpg";
-import UserCardImage from "../../images/user-card-image.png";
 
 export const UserCard = ({ user, isFollowed, updateFollowedList }) => {
   const [followers, setFollowers] = useState(user.followers);
@@ -29,17 +28,17 @@ export const UserCard = ({ user, isFollowed, updateFollowedList }) => {
 
   return (
     <Card>
-      <CardImgThumb>
+      {/* <CardImgThumb>
         <CardImg src={UserCardImage} alt="User card" />
-      </CardImgThumb>
-      <Line>
-        <AvatarThumb>
-          <Avatar
-            alt="avatar"
-            src={user.avatar ? user.avatar : UserDefaultAvatar}
-          />
-        </AvatarThumb>
-      </Line>
+      </CardImgThumb> */}
+
+      <AvatarThumb>
+        <Avatar
+          alt="avatar"
+          src={user.avatar ? user.avatar : UserDefaultAvatar}
+        />
+      </AvatarThumb>
+
       <List>
         <Item key="tweets">{user.tweets} tweets</Item>
         <Item key="followers">
