@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { Tweets } from "./pages/Tweets/Tweets";
-import { Navigate } from "react-router-dom";
+import { NotFound } from "./pages/NotFound/NotFound";
 import "./App.css";
 
 export const App = () => {
@@ -11,7 +11,7 @@ export const App = () => {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<HomePage />} />
         <Route path="tweets" element={<Tweets />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
