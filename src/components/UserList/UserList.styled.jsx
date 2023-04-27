@@ -2,6 +2,14 @@ import styled from "styled-components";
 import { Button } from "../Global.styled";
 import { Link } from "react-router-dom";
 
+export const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 20px;
+`;
+
 export const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,7 +21,6 @@ export const List = styled.ul`
 
 export const BackLink = styled(Link)`
   display: inline-block;
-  margin-bottom: 10px;
   padding: 5px 10px;
   text-decoration: none;
 
@@ -48,5 +55,28 @@ export const LoadBtn = styled(Button)`
   &:focus {
     color: ${(p) => p.theme.colors.accent};
     background: ${(p) => p.theme.colors.additional};
+  }
+`;
+
+export const Select = styled.select`
+  width: 120px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 10px;
+
+  background: ${(p) => p.theme.colors.main};
+  color: ${(p) => p.theme.colors.secondary};
+  box-shadow: 0px 2px 2px -1px rgba(75, 42, 153, 0.75);
+
+  transition: background ${(p) => p.theme.transitions.normal},
+    color ${(p) => p.theme.transitions.normal};
+
+  font-size: ${(p) => p.theme.fontSizes.s};
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: ${(p) => p.theme.colors.additional};
+    color: ${(p) => p.theme.colors.accent};
   }
 `;

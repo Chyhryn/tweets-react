@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { UserCard } from "../UserCard/UserCard";
-import { List, BackLink, LoadBtn } from "./UserList.styled";
+import { List, BackLink, LoadBtn, Select, Container } from "./UserList.styled";
 
 export const UserList = ({ users }) => {
   const [followedList, setFollowedList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [filteredUsers, setFilteredUsers] = useState(users);
 
   const usersPerPage = 12;
   const indexOfLastUser = currentPage * usersPerPage;
-  const displayedUsers = users.slice(0, indexOfLastUser);
+  const displayedUsers = filteredUsers.slice(0, indexOfLastUser);
 
   const location = useLocation();
 
@@ -29,6 +30,27 @@ export const UserList = ({ users }) => {
     setCurrentPage(currentPage + 1);
   };
 
+  const onChangeSelectHandler = (e) => {
+    switch (e.target.value) {
+      case "show-all":
+        setFilteredUsers(users);
+        break;
+      case "following":
+        setFilteredUsers(
+          users.filter((user) => followedList.includes(user.id))
+        );
+        break;
+      case "follow":
+        setFilteredUsers(
+          users.filter((user) => !followedList.includes(user.id))
+        );
+        break;
+
+      default:
+        break;
+    }
+  };
+
   useEffect(() => {
     const savedData = localStorage.getItem("followedList");
     if (savedData) {
@@ -38,7 +60,14 @@ export const UserList = ({ users }) => {
 
   return (
     <>
-      <BackLink to={location.state?.from ?? "/"}>{"<-- Back"}</BackLink>
+      <Container>
+        <BackLink to={location.state?.from ?? "/"}>{"<-- Back"}</BackLink>
+        <Select name="users-list-filter" onChange={onChangeSelectHandler}>
+          <option value="show-all">show-all</option>
+          <option value="following">following</option>
+          <option value="follow">follow</option>
+        </Select>
+      </Container>
       <List>
         {displayedUsers.map((user) => {
           return (
@@ -51,7 +80,7 @@ export const UserList = ({ users }) => {
           );
         })}
       </List>
-      {displayedUsers.length !== users.length && (
+      {displayedUsers.length !== filteredUsers.length && (
         <LoadBtn type="button" onClick={onClickHandler}>
           Load More
         </LoadBtn>
