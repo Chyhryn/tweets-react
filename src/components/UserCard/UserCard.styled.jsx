@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import UserCardLogo from "../../images/user-card-logo.png";
 import UserCardImage from "../../images/user-card-image.png";
 
 export const Card = styled.li`
@@ -13,10 +12,9 @@ export const Card = styled.li`
   height: 460px;
   border-radius: ${(p) => p.theme.radii.main};
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
-  background-image: url(${UserCardLogo}), url(${UserCardImage}),
-    ${(p) => p.theme.colors.main};
+  background-image: url(${UserCardImage}), ${(p) => p.theme.colors.main};
   background-repeat: no-repeat;
-  background-position: 20px 20px, 36px 28px, center;
+  background-position: 36px 28px, center;
   text-align: center;
 `;
 

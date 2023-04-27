@@ -59,8 +59,8 @@ export const LoadBtn = styled(Button)`
 `;
 
 export const Select = styled.select`
-  width: 120px;
-  padding: 4px 10px;
+  width: 100px;
+  padding: 4px 5px;
   border: none;
   border-radius: 10px;
 
