@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Heading, Paragraph } from "../../components/Global.styled";
+import { Heading, InfoParagraph } from "../../components/Global.styled";
 import { UserList } from "../../components/UserList/UserList";
 import { fetchUsers } from "../../redux/users/operations";
 import {
@@ -23,9 +23,9 @@ export const Tweets = () => {
     <>
       <Heading>Tweets</Heading>
       {isLoading && !error && users.length < 1 && (
-        <Paragraph>Please wait. We are loading users list.</Paragraph>
+        <InfoParagraph>Please wait. We are loading users list.</InfoParagraph>
       )}
-      {error && <Paragraph>{error}</Paragraph>}
+      {error && <InfoParagraph>{error}</InfoParagraph>}
 
       {users.length > 0 && !error && <UserList users={users} />}
     </>

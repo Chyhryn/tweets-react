@@ -6,10 +6,42 @@ export const Heading = styled.h1`
   box-shadow: 0px 2px 2px -1px rgba(75, 42, 153, 0.75);
 
   background: ${(p) => p.theme.colors.main};
-  color: ${(p) => p.theme.colors.secondary};
 
   text-align: center;
   line-height: 2;
+`;
+
+export const Heading2 = styled.h2`
+  margin-bottom: 10px;
+`;
+
+export const Heading3 = styled.h3`
+  margin-bottom: 10px;
+`;
+
+export const Section = styled.section`
+  padding 20px;
+  border-radius: ${(p) => p.theme.radii.main};
+  background: ${(p) => p.theme.colors.main};
+`;
+
+export const Pargaraph = styled.p`
+  margin-bottom: 20px;
+`;
+
+export const InfoParagraph = styled.p`
+  margin-bottom: 20px;
+  padding 20px;
+
+  border-radius: ${(p) => p.theme.radii.main};
+  background: ${(p) => p.theme.colors.main};
+
+  text-align: center;
+`;
+
+export const BasicList = styled.ul`
+  padding-left: 18px;
+  list-style: square;
 `;
 
 export const Button = styled.button`
@@ -24,15 +56,4 @@ export const Button = styled.button`
   font-size: ${(p) => p.theme.fontSizes.s};
   line-height: 1.22;
   text-transform: uppercase;
-`;
-
-export const Paragraph = styled.p`
-  margin-bottom: 20px;
-  padding 20px;
-
-  border-radius: ${(p) => p.theme.radii.main};
-  background: ${(p) => p.theme.colors.main};
-  color: ${(p) => p.theme.colors.secondary};
-
-  text-align: center;
 `;

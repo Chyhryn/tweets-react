@@ -24,6 +24,7 @@ h6,
 p {
   margin: 0;
   margin-bottom: 0;
+  color: #ebd8ff;
 }
 
 ul,
@@ -32,7 +33,11 @@ li,
 form {
   margin: 0;
   padding: 0;
-  padding-left: 0;
+  color: #ebd8ff;
+}
+
+ul,
+ol {
   list-style: none;
 }
 
