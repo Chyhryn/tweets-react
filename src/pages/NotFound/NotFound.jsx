@@ -4,12 +4,12 @@ import { Section, Text } from "./NotFound.styled";
 
 export const NotFound = () => {
   const [redirect, setRedirect] = useState(false);
-  const [countdown, setCountdown] = useState(3);
+  const [countdown, setCountdown] = useState(5);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setRedirect(true);
-    }, 3000);
+    }, 5000);
 
     const interval = setInterval(() => {
       setCountdown((prevCountDown) => prevCountDown - 1);
