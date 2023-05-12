@@ -6,10 +6,13 @@ export const theme = {
     secondary: "#ebd8ff",
     accent: "#5cd3a8",
     black: "#373737",
+    white: "#f1f1f1",
   },
   fontSizes: {
+    ss: "16px",
     s: "18px",
     m: "20px",
+    l: "24px",
   },
   fontWeights: {
     main: 500,

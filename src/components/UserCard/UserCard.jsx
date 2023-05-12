@@ -13,7 +13,6 @@ import {
 } from "./UserCard.styled";
 import { UserCardBtn } from "./UserCardBtn/UserCardBtn";
 import { updateFollowers } from "../../redux/users/operations";
-import UserDefaultAvatar from "../../images/user-default-avatar.jpg";
 
 export const UserCard = ({ user, isFollowed, updateFollowedList }) => {
   const [followers, setFollowers] = useState(user.followers);
@@ -28,15 +27,8 @@ export const UserCard = ({ user, isFollowed, updateFollowedList }) => {
 
   return (
     <Card>
-      {/* <CardImgThumb>
-        <CardImg src={UserCardImage} alt="User card" />
-      </CardImgThumb> */}
-
       <AvatarThumb>
-        <Avatar
-          alt="avatar"
-          src={user.avatar ? user.avatar : UserDefaultAvatar}
-        />
+        <Avatar alt="avatar" src={user.avatar} />
       </AvatarThumb>
 
       <List>

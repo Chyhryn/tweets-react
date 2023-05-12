@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 30px;
   align-items: stretch;
   margin: 0 auto 20px;
   color: ${(p) => p.theme.colors.secondary};

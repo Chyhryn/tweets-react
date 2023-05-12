@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Heading = styled.h1`
@@ -56,4 +57,22 @@ export const Button = styled.button`
   font-size: ${(p) => p.theme.fontSizes.s};
   line-height: 1.22;
   text-transform: uppercase;
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const CustomLink = styled(Link)`
+  text-decoration: none;
+
+  color: ${(p) => p.theme.colors.secondary};
+
+  transition: color ${(p) => p.theme.transitions.normal};
+
+  &:hover,
+  &:focus {
+    color: ${(p) => p.theme.colors.accent};
+  }
 `;
