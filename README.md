@@ -13,6 +13,8 @@
 7. Axios
 8. PropTypes
 9. [MockAPI](https://mockapi.io/)
+10. Node.js
+11. Express
 
 ## Початок роботи
 
