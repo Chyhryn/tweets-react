@@ -12,7 +12,8 @@ export const Card = styled.li`
   height: 460px;
   border-radius: ${(p) => p.theme.radii.main};
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
-  background-image: url(${UserCardImage}), ${(p) => p.theme.colors.main};
+  background-image: url(${UserCardImage}),
+    linear-gradient(98.52deg, #035dc2 0, #004a9d 100%);
   background-repeat: no-repeat;
   background-position: 36px 28px, center;
   text-align: center;

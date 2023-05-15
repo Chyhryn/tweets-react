@@ -3,19 +3,15 @@ import { Button } from "../../Global.styled";
 
 export const FollowBtn = styled(Button)`
   background-color: ${(p) => p.theme.colors.secondary};
-  transition: background-color ${(p) => p.theme.transitions.normal};
+  transition: scale ${(p) => p.theme.transitions.normal};
 
   &:hover,
   &:focus {
-    background-color: ${(p) => p.theme.colors.accent};
+    scale: 1.05;
   }
 `;
 
 export const FollowingBtn = styled(FollowBtn)`
   background-color: ${(p) => p.theme.colors.accent};
-
-  &:hover,
-  &:focus {
-    background-color: ${(p) => p.theme.colors.secondary};
-  }
+  color: ${(p) => p.theme.colors.secondary};
 `;

@@ -37,7 +37,12 @@ export const HomePage = () => {
         <>
           <Heading>Tweets project by Chyhryn Oleksandr</Heading>
           <Section>
-            <Pargaraph style={{ textAlign: "center", color: "#5cd3a8" }}>
+            <Pargaraph
+              style={{
+                textAlign: "center",
+                color: "#03B5AA",
+              }}
+            >
               Tweets project знаходиться на стадії розробки. Мета: Створити
               проект-імітацію соціальної мережі.
             </Pargaraph>

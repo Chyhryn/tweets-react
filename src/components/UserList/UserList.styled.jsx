@@ -26,17 +26,15 @@ export const BackLink = styled(Link)`
 
   border-radius: ${(p) => p.theme.radii.secondary};
 
-  transition: background ${(p) => p.theme.transitions.normal},
-    color ${(p) => p.theme.transitions.normal};
-
   background: ${(p) => p.theme.colors.main};
 
   color: ${(p) => p.theme.colors.secondary};
 
+  transition: color ${(p) => p.theme.transitions.normal};
+
   &:hover,
   &:focus {
     color: ${(p) => p.theme.colors.accent};
-    background: ${(p) => p.theme.colors.additional};
   }
 `;
 
@@ -44,17 +42,16 @@ export const LoadBtn = styled(Button)`
   display: block;
   margin: 0 auto;
 
-  transition: background ${(p) => p.theme.transitions.normal},
-    color ${(p) => p.theme.transitions.normal};
-
   background: ${(p) => p.theme.colors.main};
 
   color: ${(p) => p.theme.colors.secondary};
+  transition: color ${(p) => p.theme.transitions.normal},
+    scale ${(p) => p.theme.transitions.normal};
 
   &:hover,
   &:focus {
     color: ${(p) => p.theme.colors.accent};
-    background: ${(p) => p.theme.colors.additional};
+    scale: 1.05;
   }
 `;
 
@@ -63,20 +60,18 @@ export const Select = styled.select`
   padding: 4px 5px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 
   background: ${(p) => p.theme.colors.main};
   color: ${(p) => p.theme.colors.secondary};
   box-shadow: 0px 2px 2px -1px rgba(75, 42, 153, 0.75);
 
-  transition: background ${(p) => p.theme.transitions.normal},
-    color ${(p) => p.theme.transitions.normal};
-
+  transition: color ${(p) => p.theme.transitions.normal};
   font-size: ${(p) => p.theme.fontSizes.s};
 
   &:hover,
   &:focus {
     outline: none;
-    background: ${(p) => p.theme.colors.additional};
     color: ${(p) => p.theme.colors.accent};
   }
 `;

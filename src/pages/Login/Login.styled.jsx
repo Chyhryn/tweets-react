@@ -48,12 +48,13 @@ export const SubmitBtn = styled(Button)`
   margin: 0 auto;
   margin-bottom: 20px;
   background-color: ${(p) => p.theme.colors.secondary};
-  transition: background-color ${(p) => p.theme.transitions.normal};
+  transition: background-color ${(p) => p.theme.transitions.normal},
+    color ${(p) => p.theme.transitions.normal};
 
   &:hover,
   &:focus {
     background-color: ${(p) => p.theme.colors.accent};
-  }
+    color: ${(p) => p.theme.colors.secondary};
 `;
 
 export const FormText = styled.p`
